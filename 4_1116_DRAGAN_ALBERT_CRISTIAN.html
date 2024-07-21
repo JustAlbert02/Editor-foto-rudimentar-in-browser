@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Editor Foto</title>
+    <link rel="stylesheet" href="4_1116_DRAGAN_ALBERT_CRISTIAN.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="options">
+        <h1>Editor Foto</h1>
+        <!-- Optiunile UI aici -->
+        <input type="file" id="imageLoader" name="imageLoader" accept="image/*"/>
+        <button id="saveButton">Salvează Imaginea</button>
+        <button id="cropButton">Crop</button>
+        <select id="effectOptions">
+            <option value="selecteazaoptiune">selecteaza efect</option>
+            <option value="grayscale">Grayscale</option>
+            <option value="sepia">Sepia</option>
+        </select>
+
+        <!--Campurile pentru dimensiuni -->
+        <label for="newWidth">Noua Lățime:</label>
+        <input type="number" id="newWidth" placeholder="Lățime" min="1">
+
+        <label for="newHeight">Noua Înălțime:</label>
+        <input type="number" id="newHeight" placeholder="Înălțime" min="1">
+
+        <button id="scaleButton">Redimensionează</button>
+
+        <!-- Campurile pentru text -->
+        <label for="textInput">Introdu Text:</label>
+        <input type="text" id="textInput" placeholder="Textul tău">
+
+        <label for="textSize">Dimensiune Text:</label>
+        <input type="number" id="textSize" placeholder="Dimensiune" min="1">
+
+        <label for="textColor">Culoare Text:</label>
+        <input type="color" id="textColor" value="#000000">
+        <label for="textX">X Position:</label>
+        <input type="number" id="textX" name="textX" value="10">
+        <br>
+        <label for="textY">Y Position:</label>
+        <input type="number" id="textY" name="textY" value="30">
+
+        <button id="addTextButton">Adaugă Text</button>
+        <button id="deleteSelectionButton">Sterge Sectiune</button>
+    </div>
+    <!-- Canvas-urile -->
+    <div class="canvas-container">
+        <canvas id="imageCanvas" width="400" height="400"></canvas>
+        <canvas id="colorHistogram" width="256" height="100"></canvas>
+    </div>
+</div>
+<script src="4_1116_DRAGAN_ALBERT_CRISTIAN.js"></script>
+</body>
+</html>
